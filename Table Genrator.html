@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="te" dir="ltr">
+    <meta charset="UTF-8">
+    <title>
+        Input
+    </title>
+    <noscript>
+        <style type="text/css">
+            #hide {
+                display:none;
+            }
+        </style>
+        <div> no Javascript   </div>
+    </noscript>
+    <body>
+    <style>
+        
+button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 40px;
+}
+input {
+    font-style:italic;
+    color:white;
+    background-color:black;
+    text-align:center;
+    font-family:courier;
+    font-size:40px;
+    border-style:2px solid round;
+    border-radius:34px;
+}
+p {
+    font-size:40px;
+    text-align:center;
+    background-color:black;
+    color:violet;
+    border-style:2px solid round;
+    border-radius:40px;
+    border-color:Red;
+}
+#setBorder {
+    border-style:2px solid round;
+    border-radius:30px;
+    border-color:green;
+}
+center {
+    border-style:4px solid round;
+    border-radius:40px;
+}
+#new{
+font-family:cursive;
+color:red;
+font-size:20px;
+}
+    </style>
+    
+    <b> మీకు కావలసిన Multiplication Table కోటండి &darr; ఇది 1 నుంది 20 వరకు Table Genrate చేస్తుంది       </b>
+    
+  
+ <p id="new"></p>
+    <script>
+        function RunLinux(){
+
+
+             var a =document.getElementById("Table").value;
+             if((a==='')||(a===null)){
+                 window.alert("Empty Please Fil Something");
+                 return false;
+                 
+             }
+else{
+var text, x;
+x = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];
+
+text ="<math>";
+            for(i=0 ; i < x.length ; i++)
+         {
+            
+             text + ="<p>" a + "<i>X</i>" + x[i] + " = " + a*x[i] + "</p>";
+        
+        }
+        text + ="</math>";
+    document.getElementById("new").innerHTML=text;
+        }   
+        }
+        
+        
+    </script>
+  <center> <input type="text" placeholder="ఏమైనా కోటంది" id="Table" name="TAble"></center>
+ <center> <button onClick="RunLinux()">ఏ Table చూపిమ్మంటారో కోటంది</button></center>
+    </body>
+</html>
