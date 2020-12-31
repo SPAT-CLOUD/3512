@@ -103,7 +103,7 @@ a {
 var dev = navigator.userAgent;
              var a =document.getElementById("Table").value;
              if((a==='')||(a===null)){
-window.navigator.vibrate([10000]);
+window.navigator.vibrate([1000,466,467,367,356,366,467]);
                  window.alert("Empty Please Fil Something");
                 return false;
                  
@@ -114,7 +114,7 @@ var x = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];
          {
             var e= a*x[i];
             document.write("<br>" + a.fontcolor("blue") + " × " + x[i] + " = " + e +  "</br>");
-        setTimeout(() => location.reload(),4000);
+        setTimeout(() => window.historyback(1),4000);
         }
     }
         
