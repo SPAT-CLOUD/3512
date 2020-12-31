@@ -2,7 +2,7 @@
 <html lang="te" dir="ltr">
     <meta charset="UTF-8">
     <title>
-        Input
+        VISHNU VARDHANS TABLES WEBSITE
     </title>
     <noscript>
         <style type="text/css">
@@ -10,9 +10,9 @@
                 display:none;
             }
         </style>
-        <div> no Javascript   </div>
+        <p>Browser Settings <br>కి వెళ్లి Javascript Enable చేయండి
+    </p>   
     </noscript>
-    <body>
     <style>
         
 button {
@@ -38,7 +38,6 @@ input {
 p {
     font-size:40px;
     text-align:center;
-    background-color:black;
     color:violet;
     border-style:2px solid round;
     border-radius:40px;
@@ -53,46 +52,100 @@ center {
     border-style:4px solid round;
     border-radius:40px;
 }
-#new{
-font-family:cursive;
-color:red;
-font-size:20px;
+#websitecreator{
+         background-image:linear-gradient(to right,orange,white,green);
+         font-size:50px;
+         font-family:courier;
+         color:blue;
+}
+#Creator{
+        position:fixed;
+        margin-left:1457px;
+        margin-top:-346px;
+        opacity:0.5;
+}
+#txt {
+      font-size:20px;
+      color:white;
+      background-color:pink;
+      font-family:cursive;
+      text-shadow:2px 2px black;
+}
+a {
+   text-decoration:none;
+}
+#counts{
+       font-size:30px;
+       font-family:courier;
+       background-color:green;
+       color:gold;
+}
+#xs {
+    font-size:30px;
+    color:white;
+    background-color:black;
+    font-family:cursive;
+}
+-:fullscreen{
+   background-color:red;
 }
     </style>
-    
-    <b> మీకు కావలసిన Multiplication Table కోటండి &darr; ఇది 1 నుంది 20 వరకు Table Genrate చేస్తుంది       </b>
-    
-  
- <p id="new"></p>
+<body onload="viewer()">
+<div id="hide">
+<center id="websitecreator">Website Created By Vishnu Vardhan</center>
+    <p> మీకు కావలసిన Multiplication Table కోటండి &darr; ఇది 1 నుంది 20 వరకు Table Genrate చేస్తుంది        </p>
+    <div id="setBorder">
+  <center> <input type="text" placeholder="ఏమైనా కోటంది" id="Table"></center>
+ <center> <button type="button" onclick="RunLinux()">ఏ Table చూపిమ్మంటారో కోటంది</button></center></div>
+
     <script>
         function RunLinux(){
-
-
+var dev = navigator.userAgent;
              var a =document.getElementById("Table").value;
              if((a==='')||(a===null)){
+window.navigator.vibrate([10000]);
                  window.alert("Empty Please Fil Something");
-                 return false;
+                return false;
                  
              }
-else{
-var text, x;
-x = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];
-
-text ="<math>";
-            for(i=0 ; i < x.length ; i++)
+document.write("After 4 Seconds Page Will Go Back");
+var x = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];
+            for(i=0 ; i<x.length ; i++)
          {
-            
-             text + ="<p>" a + "<i>X</i>" + x[i] + " = " + a*x[i] + "</p>";
-        
+            var e= a*x[i];
+            document.write("<br>" + a.fontcolor("blue") + " × " + x[i] + " = " + e +  "</br>");
+        setTimeout(() => location.reload(),4000);
         }
-        text + ="</math>";
-    document.getElementById("new").innerHTML=text;
-        }   
-        }
-        
+    }
         
     </script>
-  <center> <input type="text" placeholder="ఏమైనా కోటంది" id="Table" name="TAble"></center>
- <center> <button onClick="RunLinux()">ఏ Table చూపిమ్మంటారో కోటంది</button></center>
-    </body>
+<script>
+var v = 454548;
+function viewer() {
+window.setInterval("count()",10);
+}
+function count(){ 
+++v;
+document.getElementById("counts").innerHTML=v;
+
+if(v>1000){
+var h = v/1000;
+document.getElementById("counts").innerHTML= Math.floor(h) +"K";
+}
+}
+</script>
+<script>
+function Fscr(){
+var new = document.getElementById("Creator");
+if(new.Requestfullscreen){
+new.Requestfullscreen();
+}
+}
+</script>
+    <img src="https://yt3.ggpht.com/yti/ANoDKi69LhLK0kWmGgKrEfnd6KWh9gT1c4v2G5KeqWMX=s88-c-k-c0x00ffffff-no-rj-mo" alt="creatorImage" width="200" height="200" onclick="Fscr()" id="Creator">
+  <p id="txt">See Who Created This Web Site <a href="#Creator">Click This</a> </p>
+<b id="xs">Now Website Viewers Are <i  id="counts"></i></b>
+
+</div>
+</body>
 </html>
